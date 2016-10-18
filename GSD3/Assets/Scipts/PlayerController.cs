@@ -25,27 +25,29 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            transform.position += transform.forward * Time.deltaTime * movementSpeed;
+            transform.Translate(calculateMovement(transform.forward));
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            transform.position -= transform.forward * Time.deltaTime * movementSpeed;
+            transform.Translate(calculateMovement(transform.forward));
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            transform.position += transform.right * Time.deltaTime * movementSpeed;
+            transform.Translate(calculateMovement(transform.right));
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            transform.position -= transform.right * Time.deltaTime * movementSpeed;
+            transform.Translate(calculateMovement(transform.right));
         }
     }
 
-    void OnCollisionEnter(Collision col)
+    public Vector3 calculateMovement(Vector3 direction)
     {
-        print("BLUB");
+        return direction * Time.deltaTime * movementSpeed;
     }
+
+    void OnCollisionEnter(Collision col){}
 }
