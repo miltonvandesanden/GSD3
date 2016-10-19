@@ -11,6 +11,12 @@ public class WallController : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {
-        print("AUW!");
+        print("ColEnter!");
     }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        print("TrigEnter!");
+    }
+
 }

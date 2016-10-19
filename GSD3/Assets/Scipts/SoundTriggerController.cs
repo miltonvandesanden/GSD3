@@ -14,12 +14,18 @@ public class SoundTriggerController : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        audioSourceEnter.Play();
+        if(col.tag == "Player")
+        {
+            audioSourceEnter.Play();
+        }
     }
 
     void OnTriggerExit(Collider col)
     {
-
+        if (col.tag == "Player")
+        {
+            audioSourceExit.Play();
+        }
     }
 
 }
