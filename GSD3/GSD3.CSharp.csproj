@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scipts\PlayerController.cs" />
+    <Compile Include="Assets\Scipts\SoundTriggerController.cs" />
     <Compile Include="Assets\Scipts\WallController.cs" />
   </ItemGroup>
   <ItemGroup>
