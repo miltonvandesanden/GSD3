@@ -16,7 +16,10 @@ public class SoundTriggerController : MonoBehaviour
     {
         if(col.tag == "Player")
         {
-            audioSourceEnter.Play();
+            if(audioSourceEnter != null)
+            {
+                audioSourceEnter.Play();
+            }
         }
     }
 
@@ -24,7 +27,10 @@ public class SoundTriggerController : MonoBehaviour
     {
         if (col.tag == "Player")
         {
-            audioSourceExit.Play();
+            if(audioSourceExit != null)
+            {
+                audioSourceExit.Play();
+            }
         }
     }
 

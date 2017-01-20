@@ -3,9 +3,11 @@ using System.Collections;
 
 public class RunningPersonTriggerController : MonoBehaviour
 {
+    public AudioSource audioSource;
+
 	// Use this for initialization
 	void Start () {
-	
+	    //print("BLUB");
 	}
 	
 	// Update is called once per frame
@@ -13,12 +15,8 @@ public class RunningPersonTriggerController : MonoBehaviour
 	
 	}
 
-    void onTriggerEnter(Collider collider)
+    void OnTriggerEnter(Collider collider)
     {
-        print("RUN");
-        while(transform.position.z != 15)
-        {
-            transform.Translate(transform.position.x, transform.position.y, transform.position.z + 1);
-        }
+        audioSource.Play();
     }
 }
